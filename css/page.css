@@ -1,0 +1,36 @@
+.container-check {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-check > label {
+  color: #707070;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+}
+
+.container-check > input {
+  display: none;
+}
+
+.container-check > label:before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 4px solid #707070;
+  border-radius: 4px;
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.container-check-input:checked + .container-check-label:before {
+  background-color: #707070;
+  box-shadow: inset 0 0 0 3.5px #BDBDBD;
+}
