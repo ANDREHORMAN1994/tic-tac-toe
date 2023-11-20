@@ -11,6 +11,7 @@
   font-weight: bold;
   cursor: pointer;
   position: relative;
+  margin-left: 30px;
 }
 
 .container-check > input {
