@@ -40,8 +40,8 @@ const renderEvents = () => {
   });
 }
 
-const messageWinner = (winner) => {
-  eventsList.push(`${winner} GANHOU!`);
+const messageWinner = (message) => {
+  eventsList.push(message);
   renderEvents();
 };
 
@@ -136,8 +136,17 @@ const verifyWinner = () => {
     winner = 'O';
   }
 
+  if (ticTacList.every((row) => row.every((col) => col !== 0))) {
+    messageWinner(`EMPATE!`);
+    
+    setTimeout(() => {
+      alert(`EMPATE!`);
+      resetGame();
+    }, 100);
+  }
+
   if (winner) {
-    messageWinner(winner);
+    messageWinner(`${winner} GANHOU!`);
     
     setTimeout(() => {
       alert(`O vencedor é ${winner}`);
