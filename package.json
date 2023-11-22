@@ -2,6 +2,7 @@
   "name": "prototipo-mp-tic-tac-toe",
   "version": "1.0.0",
   "description": "Jogo da Velha desenvolvido com HTML, CSS e JS",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "dev": "http-server -p 3000"

@@ -38,6 +38,15 @@
   border-radius: 10px;
 }
 
+.event-winner {
+  background-color: #EFF25A;
+  font-size: 1rem;
+  font-weight: 700;
+  color: black;
+  padding: .7rem .8rem;
+  border-radius: 10px;
+}
+
 .row {
   width: 100%;
   max-width: 100%;
