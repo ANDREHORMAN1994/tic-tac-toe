@@ -34,7 +34,9 @@ const renderEvents = () => {
   eventsEl.innerHTML = '';
   eventsList.forEach((event) => {
     const eventEl = document.createElement('p');
-    eventEl.classList.add((event.includes('GANHOU')) || (event.includes('EMPATE')) ? 'event-winner' : 'event');
+    eventEl.classList.add(
+      (event.includes('GANHOU')) || (event.includes('EMPATE')) ? 'event-winner' : 'event'
+    );
     eventEl.innerHTML = event;
     eventsEl.appendChild(eventEl);
   });
@@ -138,7 +140,7 @@ const verifyWinner = () => {
 
   if (ticTacList.every((row) => row.every((col) => col !== 0))) {
     messageWinner(`EMPATE!`);
-    
+
     setTimeout(() => {
       alert(`EMPATE!`);
       resetGame();
@@ -147,7 +149,7 @@ const verifyWinner = () => {
 
   if (winner) {
     messageWinner(`${winner} GANHOU!`);
-    
+
     setTimeout(() => {
       alert(`O vencedor é ${winner}`);
       resetGame();
