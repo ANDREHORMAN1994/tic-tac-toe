@@ -96,7 +96,7 @@ const verifyWinner = () => {
     winner = 'O';
   }
 
-  if (ticTacList.every((row) => row.every((col) => col !== 0))) {
+  if (ticTacList.every((row) => row.every((col) => col !== 0)) && !winner) {
     messageWinner(`EMPATE!`);
 
     setTimeout(() => {
