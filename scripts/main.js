@@ -1,8 +1,7 @@
-// import Swal from 'https://cdn.jsdelivr.net/npm/sweetalert2@11.10.0/+esm'
-
 const gameEl = document.querySelector('.container-game');
 const eventsEl = document.querySelector('.container-events');
 const checkEl = document.querySelector('.check-input');
+
 let ticTacList = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
 let eventsList = [];
 let player = 'X';
@@ -143,18 +142,6 @@ const verifyWinner = () => {
     setTimeout(() => {
       alert(`O vencedor é ${winner}`);
       resetGame();
-
-      // Swal.fire({
-      //   title: 'Parabéns!',
-      //   text: `O vencedor é ${winner}`,
-      //   icon: 'success',
-      //   confirmButtonText: 'Jogar novamente?',
-      //   allowOutsideClick: false,
-      // }).then((result) => {
-      //   if (result.isConfirmed) {
-      //     resetGame();
-      //   }
-      // });
     }, 100);
   }
 };
