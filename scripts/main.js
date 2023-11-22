@@ -34,7 +34,7 @@ const renderEvents = () => {
   eventsEl.innerHTML = '';
   eventsList.forEach((event) => {
     const eventEl = document.createElement('p');
-    eventEl.classList.add(event.includes('GANHOU') ? 'event-winner' : 'event');
+    eventEl.classList.add((event.includes('GANHOU')) || (event.includes('EMPATE')) ? 'event-winner' : 'event');
     eventEl.innerHTML = event;
     eventsEl.appendChild(eventEl);
   });
