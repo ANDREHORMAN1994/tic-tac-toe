@@ -13,6 +13,12 @@ body {
   background-color: #BDBDBD;
 }
 
+@media (max-width: 768px) {
+  body {
+    height: fit-content;
+  }
+}
+
 .overlay {
   position: fixed;
   top: 0;
@@ -35,4 +41,15 @@ body {
   justify-content: center;
   align-items: center;
   gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .container-main {
+    height: fit-content;
+    margin-top: 7rem;
+    margin-bottom: 2rem;
+    flex-flow: column-reverse nowrap;
+    justify-content: flex-end;
+    gap: 1.5rem;
+  }
 }
