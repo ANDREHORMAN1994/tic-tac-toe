@@ -3,6 +3,20 @@ import { eventsList, renderEvents } from './check.js';
 
 let player = 'X';
 
+const changePlayer = () => {
+  setTimeout(() => {
+    const symbol = prompt('Qual deve começar ? X ou O');
+  
+    if (symbol?.toLowerCase() === 'x' || symbol?.toLowerCase() === 'o') {
+      player = symbol.toUpperCase();
+      return;
+    }
+    
+    alert('Escolha inválida! Digite X ou O');
+    changePlayer();
+  }, 100)
+};
+
 const createImage = (path) => {
   const imgEl = document.createElement('img');
   imgEl.classList.add('img-block');
@@ -53,5 +67,6 @@ const createBlock = (newElement, classNameList, id) => {
 };
 
 export {
+  changePlayer,
   createBlock,
 };
