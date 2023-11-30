@@ -36,6 +36,21 @@ const resetBgBlock = () => {
   });
 };
 
+const formattingCol = (row, col) => {
+  let letter;
+  let number;
+  console.log(row, col, typeof row, typeof col);
+
+  if (col === '0') letter = 'A';
+  if (col === '1') letter = 'B';
+  if (col === '2') letter = 'C';
+  if (row === '0') number = '1';
+  if (row === '1') number = '2';
+  if (row === '2') number = '3';
+
+  return `${letter}${number}`;
+}
+
 const handleClick = (id, blockEl) => {
   const [_, row, col] = id.split('-');
 
@@ -43,11 +58,11 @@ const handleClick = (id, blockEl) => {
     ticTacList[row][col] = player;
 
     if (player === 'X') {
-      blockEl.appendChild(createImage('../assets/x.png'));
-      eventsList.push('Adicionou X');
+      blockEl.appendChild(createImage('../assets/x.svg'));
+      eventsList.push(`X na posição ${formattingCol(row, col)}`);
     } else {
-      blockEl.appendChild(createImage('../assets/o.png'));
-      eventsList.push('Adicionou O');
+      blockEl.appendChild(createImage('../assets/o.svg'));
+      eventsList.push(`O na posição ${formattingCol(row, col)}`);
     }
 
     resetBgBlock();
